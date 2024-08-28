@@ -1,0 +1,20 @@
+Resultado del segundo text
+
+Resultado esperado : "[\n{\n  id: 1,\n  first_name: 'Joshua',\n  last_name: 'Diaz',\n  email: 'j3@example.com'\n},\n{\n  id: 2,\n  first_na...3@example.com'\n},\n{\n  id: 4,\n  first_name: 'Olivia',\n  last_name: 'Brown',\n  email: 'olibrown432@example.net'\n}" in 
+Resultado entregado: "[\n  {\n    id: '1',\n    first_name: 'Joshua',\n    last_name: 'Diaz',\n    email: 'j3@example.com'\n  },\n  {\n    ...t'\n  },\n  {\n    id: '5',\n    first_name: 'Alex',\n    last_name: 'Chen',\n    email: 'achen12@example.net'\n  }\n]"
+
+Aqui se observa que si lleva '\n' pero los espacios no son los correctos, ademas que el indice lo espera sin comillas y el codigo que se envia lleva con comillas
+el id
+
+Resultado esperado : "[\n{\n  id: 1,\n  first_name: 'Joshua',\n  last_name: 'Diaz',\n  email: 'j3@example.com'\n},\n{\n  id: 2,\n  first_na...3@example.com'\n},\n{\n  id: 4,\n  first_name: 'Olivia',\n  last_name: 'Brown',\n  email: 'olibrown432@example.net'\n}" in 
+Resultado entregado: "[\n  {\n    id: '1',\n    first_name: 'Joshua',\n    last_name: 'Diaz',\n    email: 'j3@example.com'\n  },\n  {\n    ...t'\n  },\n  {\n    id: '5',\n    first_name: 'Alex',\n    last_name: 'Chen',\n    email: 'achen12@example.net'\n  }\n]"
+
+otra observacion es que el resultado que pide el test 2 y test 4 deberia ser el mismo, pero:
+
+Resultado esperado por test 2: "[\n{\n  id: 1,\n  first_name: 'Joshua',\n  last_name: 'Diaz',\n  email: 'j3@example.com'\n},\n{\n  id: 2,\n  first_na...3@example.com'\n},\n{\n  id: 4,\n  first_name: 'Olivia',\n  last_name: 'Brown',\n  email: 'olibrown432@example.net'\n}"
+Resultado esperado por test 4: "[\n  {\n    id: 1,\n    first_name: 'Joshua',\n    last_name: 'Diaz',\n    email: 'j3@example.com'\n  },\n  {\n    id... },\n  {\n    id: 4,\n    first_name: 'Olivia',\n    last_name: 'Brown',\n    email: 'olibrown432@example.net'\n  }\n]"
+Resultado entregado:           "[\n  {\n    id: '1',\n    first_name: 'Joshua',\n    last_name: 'Diaz',\n    email: 'j3@example.com'\n  },\n  {\n    ...t'\n  },\n  {\n    id: '5',\n    first_name: 'Alex',\n    last_name: 'Chen',\n    email: 'achen12@example.net'\n  }\n]"
+
+
+assert "{\n  id: 6,\n  first_name: 'Kai',\n  last_name: 'Nathaniel',\n  email: 'kai.n@example.org'\n}" 
+    in "{\n  id: '6',\n  first_name: 'Kai',\n  last_name: 'Nathaniel',\n  email: 'kai.n@example.org'\n}"         
